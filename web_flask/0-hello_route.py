@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""Simple Flask web application"""
+"""This module uses Flask and starts a web application"""
+
+
 from flask import Flask
-app = Flask('web_flask')
+app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_route():
-        """Return simple string"""
-            return 'Hello HBNB!'
+def hello_hbnb():
+    """Hello world for flask"""
+    return "Hello HBNB!"
 
-
-        if __name__ == "__main__":
-                app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="5000")
